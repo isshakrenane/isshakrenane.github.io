@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,29 +56,55 @@
             <div class="logo">
                 <a href="#">Isshak.dev</a>
             </div>
+            
             <button id="theme-toggle" aria-label="Toggle light/dark mode"></button>
             <nav>
                 <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#resume">Resume</a></li>
-                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#home" data-i18n="home">Home</a></li>
+                    <li><a href="#about" data-i18n="about">About</a></li>
+                    <li><a href="#skills" data-i18n="skills">Skills</a></li>
+                    <li><a href="#services" data-i18n="services">Services</a></li>
+                    <li><a href="#projects" data-i18n="projects">Projects</a></li>
+                    <li><a href="#resume" data-i18n="resume">Resume</a></li>
+                    <li><a href="#contact" data-i18n="contact">Contact</a></li>
+
+                    <!-- ✅ MOBILE FLAGS (inside burger menu) -->
+                    <li class="mobile-lang">
+                      <div class="lang-switcher">
+                          <button data-lang="en"><img src="https://flagcdn.com/w20/gb.png">EN</button>
+                          <button data-lang="fr"><img src="https://flagcdn.com/w20/fr.png">FR</button>
+                          <button data-lang="ar"><img src="https://flagcdn.com/w20/sa.png">AR</button>
+                      </div>
+                    </li>
                 </ul>
             </nav>
+
+                    <!-- ✅ DESKTOP FLAGS (visible on top bar) -->
+                       <div class="lang-dropdown desktop-lang">
+                          <div class="selected-lang">
+                          <img id="current-flag" src="https://flagcdn.com/w20/gb.png" alt="Language">
+                          <i class="fas fa-chevron-down"></i>
+                       </div>
+
+                       <div class="dropdown-menu">
+                          <button data-lang="en"><img src="https://flagcdn.com/w20/gb.png">EN</button>
+                          <button data-lang="fr"><img src="https://flagcdn.com/w20/fr.png">FR</button>
+                          <button data-lang="ar"><img src="https://flagcdn.com/w20/sa.png">AR</button>
+                       </div>
+</div>
+
+    
             <!-- Static burger button so the icon exists even if JS fails or loads differently -->
             <div class="burger-menu" aria-label="Toggle navigation" role="button" tabindex="0">
                 <i class="fas fa-bars" aria-hidden="true"></i>
             </div>
         </div>
-        <div class="hero-content">
-            <h1>Isshak Renane</h1>
-            <h2>Web Developer, Designer & IT Professional</h2>
-            <p>Crafting engaging digital experiences and providing robust IT solutions.</p>
-            <a href="#projects" class="btn">View My Work</a>
-        </div>
+              <div class="hero-content">
+                  <h1 data-i18n="name">Isshak Renane</h1>
+                  <h2 data-i18n="heroTitle">Web Developer, Designer & IT Professional</h2>
+                  <p data-i18n="heroText">Crafting engaging digital experiences and providing robust IT solutions.</p>
+                  <a href="#projects" class="btn" data-i18n="viewWork">View My Work</a>
+             </div>
     </header>
 
     <section id="about" class="section about-section">
@@ -86,9 +112,9 @@
             <h2>About Me</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>Hello! I'm Isshak Renane, a passionate web developer and designer with a keen eye for aesthetics and functionality. With a background in IT services, I bring a holistic approach to building digital solutions, ensuring they are not only visually appealing but also secure, efficient, and user-friendly.</p>
-                    <p>My journey in the digital realm started with a fascination for how websites are built, leading me to master HTML, CSS, JAVASCRIPT and modern web development practices. I love solving problems and creating intuitive interfaces that enhance user experience. When I'm not coding, I'm often exploring new design trends or diving deep into network security.</p>
-                    <p>Let's connect and build something amazing together!</p>
+                    <p class="about-p1" data-i18n="aboutP1">Hello! I'm Isshak Renane, a passionate web developer and designer with a keen eye for aesthetics and functionality. With a background in IT services, I bring a holistic approach to building digital solutions, ensuring they are not only visually appealing but also secure, efficient, and user-friendly.</p>
+                    <p class="about-p2" data-i18n="aboutP2">My journey in the digital realm started with a fascination for how websites are built, leading me to master HTML, CSS, JAVASCRIPT and modern web development practices. I love solving problems and creating intuitive interfaces that enhance user experience. When I'm not coding, I'm often exploring new design trends or diving deep into network security.</p>
+                    <p class="about-p3" data-i18n="aboutP3">Let's connect and build something amazing together!</p>
                 </div>
                 <div class="about-image">
                     <img src="images/Isshak Test 5469 copy.jpg" alt="Isshak Renane"> 
@@ -174,32 +200,32 @@
                 <div class="service-card">
                     <i class="fas fa-laptop-code"></i>
                     <h3>Web Development</h3>
-                    <p>Building responsive and dynamic websites using modern web technologies.</p>
+                    <p data-i18n="serviceWebDev">Building responsive and dynamic websites using modern web technologies.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-palette"></i>
                     <h3>Web Design</h3>
-                    <p>Creating intuitive and visually stunning user interfaces and experiences.</p>
+                    <p data-i18n="serviceWebDesign">Creating intuitive and visually stunning user interfaces and experiences.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-network-wired"></i>
                     <h3>IT Consulting</h3>
-                    <p>Providing expert advice and solutions for your IT infrastructure and security needs.</p>
+                    <p data-i18n="serviceITConsulting">Providing expert advice and solutions for your IT infrastructure and security needs.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-mobile-alt"></i>
                     <h3>Responsive Design</h3>
-                    <p>Ensuring your website looks and functions perfectly on all devices.</p>
+                    <p data-i18n="serviceResponsiveDesign">Ensuring your website looks and functions perfectly on all devices.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-shield-alt"></i>
                     <h3>Cybersecurity Audits</h3>
-                    <p>Assessing and enhancing the security posture of your digital assets.</p>
+                    <p data-i18n="serviceCybersecurityAudits">Assessing and enhancing the security posture of your digital assets.</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-cloud"></i>
                     <h3>Cloud Solutions</h3>
-                    <p>Implementing and managing scalable cloud services for your business.</p>
+                    <p data-i18n="serviceCloudSolutions">Implementing and managing scalable cloud services for your business.</p>
                 </div>
             </div>
         </div>
@@ -212,55 +238,55 @@
                 <div class="project-card">
                     <img src="./images/weather_app.jpg" alt="Weather Page Project Screenshot">
                     <h3>Interactive Weather App</h3>
-                    <p>A dynamic web application built with HTML, CSS, and JavaScript that fetches real-time weather data for any city.</p>
+                    <p data-i18n="projectWeatherApp">A dynamic web application built with HTML, CSS, and JavaScript that fetches real-time weather data for any city.</p>
                     <div class="project-links">
-                        <a href="https://isshakrenane.github.io/weather_app/" class="btn-small" target="_blank">View Live Site</a>
-                        <a href="https://github.com/isshakrenane/weather_app/blob/main/index.html" class="btn-small" target="_blank">View Code On Github</a>
+                        <a href="https://isshakrenane.github.io/weather_app/" class="btn-small" target="_blank" data-i18n="projectViewLiveSite">View Live Site</a>
+                        <a href="https://github.com/isshakrenane/weather_app/blob/main/index.html" class="btn-small" target="_blank" data-i18n="projectViewCode">View Code On Github</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="./images/creative-portfolio.jpg" alt="Creative Portfolio Webpage">
                     <h3>Creative Artist Landing Page</h3>
-                    <p>Conceptualized and designed a sleek artist portfolio interface using Figma, focusing on clarity and artistic presentation.</p>
+                    <p data-i18n="projectCreativePortfolio">Conceptualized and designed a sleek artist portfolio interface using Figma, focusing on clarity and artistic presentation.</p>
                     <div class="project-links">
-                        <a href="./images/creative-portfolio.jpg" class="btn-small" target="_blank">View Mockup</a>
+                        <a href="./images/creative-portfolio.jpg" class="btn-small" target="_blank" data-i18n="projectViewMockup">View Mockup</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="./images/E_Commerce_platform.jpg" alt="E-commerce Product Page Design">
                     <h3>E-commerce Product Page</h3>
-                    <p>Conceptual design for an intuitive and visually appealing e-commerce product detail page, prioritizing user journey.</p>
+                    <p data-i18n="projectECommerce">Conceptual design for an intuitive and visually appealing e-commerce product detail page, prioritizing user journey.</p>
                     <div class="project-links">
-                        <a href="https://isshakrenane.github.io/E-Commerce-Platfom-Mockup/" class="btn-small" target="_blank">View Live Site</a>
-                        <a href="https://github.com/isshakrenane/E-Commerce-Platfom-Mockup/blob/main/index.html" class="btn-small" target="_blank">View Code On Github</a>
+                        <a href="https://isshakrenane.github.io/E-Commerce-Platfom-Mockup/" class="btn-small" target="_blank" data-i18n="projectViewLiveSite">View Live Site</a>
+                        <a href="https://github.com/isshakrenane/E-Commerce-Platfom-Mockup/blob/main/index.html" class="btn-small" target="_blank" data-i18n="projectViewCode">View Code On Github</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="./images/photography_img.png" alt="Business Landing Page Design">
                     <h3>Richard Gleed Photography Portfolio</h3>
-                    <p>A sleek and modern photography portfolio designed to highlight visual storytelling through elegant layouts, dark tones, and cinematic presentation.</p>
+                    <p data-i18n="projectPhotographyPortfolio">A sleek and modern photography portfolio designed to highlight visual storytelling through elegant layouts, dark tones, and cinematic presentation.</p>
                     <div class="project-links">
-                        <a href="https://isshakrenane.github.io/Richard_Gleed_Photgrapher_Portfolio/" class="btn-small" target="_blank">View Live Site</a>
-                        <a href="https://github.com/isshakrenane/Richard_Gleed_Photgrapher_Portfolio/blob/main/index.html" class="btn-small" target="_blank">View Code On Github</a>
+                        <a href="https://isshakrenane.github.io/Richard_Gleed_Photgrapher_Portfolio/" class="btn-small" target="_blank" data-i18n="projectViewLiveSite">View Live Site</a>
+                        <a href="https://github.com/isshakrenane/Richard_Gleed_Photgrapher_Portfolio/blob/main/index.html" class="btn-small" target="_blank" data-i18n="projectViewCode">View Code On Github</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="./images/Cybersecurity_Audit1.jpg" alt="Cybersecurity Audit Overview">
                     
                     <h3>System Security Audit-Kali Linux</h3>
-                    <p>Performed a complete security audit using Lynis to identify vulnerabilities and system hardening opportunities. Designed visuals to display key findings and improvement areas.</p>
+                    <p data-i18n="projectCybersecurityAudit">Performed a complete security audit using Lynis to identify vulnerabilities and system hardening opportunities. Designed visuals to display key findings and improvement areas.</p>
                     <div class="project-links">
-                        <a href="./images/Cybersecurity_Audit1.jpg" class="btn-small" target="_blank">View Summary</a>
-                        <a href="./images/Cybersecurity_Audit4.jpg" class="btn-small" target="_blank">View Details</a>
+                        <a href="./images/Cybersecurity_Audit1.jpg" class="btn-small" target="_blank" data-i18n="projectViewSummary">View Summary</a>
+                        <a href="./images/Cybersecurity_Audit4.jpg" class="btn-small" target="_blank" data-i18n="projectViewDetails">View Details</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <img src="./images/3D_cube.jpg" alt="Interactive 3D Cube Visualization">
                     <h3>Dynamic 3D Cube Renderer</h3>
-                    <p>A pure **HTML/CSS** project demonstrating 3D transformations, perspective, and interactive rotation using standard web technologies and **CSS animations**</p>
+                    <p data-i18n="project3DCube">A pure **HTML/CSS** project demonstrating 3D transformations, perspective, and interactive rotation using standard web technologies and **CSS animations**</p>
                     <div class="project-links">
-                        <a href="https://isshakrenane.github.io/3D_Cube_Faces/" class="btn-small" target="_blank">View Live Site</a>
-                        <a href="https://github.com/isshakrenane/3D_Cube_Faces/blob/main/index.html" class="btn-small" target="_blank">View Code On Github</a>
+                        <a href="https://isshakrenane.github.io/3D_Cube_Faces/" class="btn-small" target="_blank" data-i18n="projectViewLiveSite">View Live Site</a>
+                        <a href="https://github.com/isshakrenane/3D_Cube_Faces/blob/main/index.html" class="btn-small" target="_blank" data-i18n="projectViewCode">View Code On Github</a>
                     </div>
                 </div>
                 </div>
@@ -270,8 +296,8 @@
     <section id="resume" class="section resume-section">
         <div class="container">
             <h2>Resume</h2>
-            <p>You can download my full resume here:</p>
-            <a href="CV_isshak_Eng.pdf" class="btn" download>Download Resume</a>
+            <p data-i18n="resumeDescription">You can download my full resume here:</p>
+            <a href="CV_isshak_Eng.pdf" class="btn" download data-i18n="resumeDownload">Download Resume</a>
             <div class="resume-preview">
                 <h3>Key Skills:</h3>
                 <ul>
@@ -320,11 +346,11 @@
     <section id="contact" class="section contact-section">
         <div class="container">
             <h2>Get in Touch</h2>
-            <p>Have a project in mind or just want to chat? Feel free to reach out!</p>
+            <p data-i18n="contactDescription">Have a project in mind or just want to chat? Feel free to reach out!</p>
             <div class="contact-details">
-                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:isshakrenane@live.fr">isshakrenane@live.fr</a></p>
-                <p><i class="fas fa-phone"></i> Phone: <a href="tel:+447542331994">+44 7542 331 994</a></p>
-                <p><i class="fas fa-map-marker-alt"></i> Location: London, UK</p>
+                <p data-i18n="contactEmail"><i class="fas fa-envelope"></i> Email: <a href="mailto:isshakrenane@live.fr">isshakrenane@live.fr</a></p>
+                <p data-i18n="contactPhone"><i class="fas fa-phone"></i> Phone: <a href="tel:+447542331994">+44 7542 331 994</a></p>
+                <p data-i18n="contactLocation"><i class="fas fa-map-marker-alt"></i> Location: London, UK</p>
             </div>
             <div class="social-links">
                 <a href="https://www.linkedin.com/in/isshak-renane-367428274/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin fa-2x"></i></a>
@@ -333,10 +359,10 @@
                 <a href="https://github.com/isshakrenane" target="_blank" aria-label="GitHub"><i class="fab fa-github fa-2x"></i></a>
             </div>
             <form class="contact-form">
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea placeholder="Your Message" rows="6" required></textarea>
-                <button type="submit" class="btn">Send Message</button>
+                <input type="text" data-i18n-placeholder="yourName" placeholder="Your Name" required>
+                <input type="email" data-i18n-placeholder="yourEmail" placeholder="Your Email" required>
+                <textarea data-i18n-placeholder="yourMessage" placeholder="Your Message" rows="6" required></textarea>
+                <button type="submit" class="btn" data-i18n="contactSend">Send Message</button>
             </form>
         </div>
     </section>
@@ -351,9 +377,3 @@
 </body>
 
 </html>
-
-
-
-
-
-
