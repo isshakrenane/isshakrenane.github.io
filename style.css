@@ -925,3 +925,235 @@ body.light-mode .btn {
 body.light-mode .btn:hover {
   background-color: #0056b3;
 }
+
+
+/* --- Language Switcher Flags --- */
+/* --- Language Switcher (Modern Square Flags) --- */
+.lang-switcher {
+    display: flex;
+    gap: 8px;
+}
+
+.lang-switcher button {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 6px; /* 🔥 soft modern edges */
+    padding: 4px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(4px);
+}
+
+/* Flag image */
+.lang-switcher img {
+    width: 22px;
+    height: 16px;
+    object-fit: cover;
+    border-radius: 4px; /* slightly rounded flag itself */
+}
+
+/* Hover effect */
+.lang-switcher button:hover {
+    transform: translateY(-2px) scale(1.05);
+    border-color: var(--accent-bright);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4),
+                0 0 10px var(--accent-bright);
+}
+
+/* Active state (selected language) */
+.lang-switcher button.active {
+    border-color: var(--accent-bright);
+    background: rgba(233, 69, 96, 0.15);
+    box-shadow: 0 0 12px var(--accent-bright);
+}
+
+/* Subtle press effect */
+.lang-switcher button:active {
+    transform: scale(0.95);
+}
+
+/* Hide mobile flags by default (desktop) */
+.mobile-lang {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+    /* Hide desktop flags on mobile */
+    .desktop-lang {
+        display: none;
+    }
+
+    /* Show mobile flags inside burger */
+    .mobile-lang {
+        display: block;
+    }
+
+    .mobile-lang .lang-switcher {
+        justify-content: flex-start;
+        padding: 10px;
+        margin-left: 10px;
+    }
+    .mobile-lang .lang-switcher button {
+        color: white;
+    }
+}
+
+/* --- Desktop Language Dropdown --- */
+.lang-dropdown {
+    position: relative;
+    margin-right: 10px;
+}
+
+/* Selected flag */
+.selected-lang {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 5px 8px;
+    border-radius: 6px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: all 0.25s ease;
+}
+
+.selected-lang img {
+    width: 22px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.selected-lang i {
+    font-size: 0.7rem;
+    color: var(--text-light);
+}
+
+/* Hover */
+.selected-lang:hover {
+    border-color: var(--accent-bright);
+    box-shadow: 0 0 10px var(--accent-bright);
+}
+
+/* Dropdown */
+.dropdown-menu {
+    position: absolute;
+    top: 110%;
+    right: 0;
+    background: var(--secondary-dark);
+    border-radius: 8px;
+    padding: 6px;
+    display: none;
+    flex-direction: column;
+    gap: 6px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    z-index: 999;
+}
+
+/* Show dropdown */
+.lang-dropdown.open .dropdown-menu {
+    display: flex;
+}
+
+/* Buttons */
+.dropdown-menu button {
+    color: white;
+    background: transparent;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+
+.dropdown-menu button:hover {
+    background: rgba(255,255,255,0.05);
+    transform: scale(1.05);
+}
+
+.dropdown-menu img {
+    width: 22px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.lang-dropdown .dropdown-menu {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: 0.2s ease;
+  pointer-events: none;
+}
+
+.lang-dropdown.open .dropdown-menu {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+
+
+/* =========================
+   ARABIC / RTL SUPPORT
+   ========================= */
+
+html[dir="rtl"] {
+    direction: rtl;
+}
+
+body.arabic {
+    direction: rtl;
+    text-align: right;
+}
+
+/* Navigation */
+html[dir="rtl"] .navbar nav ul {
+    direction: rtl;
+}
+
+/* Sections */
+html[dir="rtl"] .about-grid,
+html[dir="rtl"] .skills-content,
+html[dir="rtl"] .services-grid,
+html[dir="rtl"] .projects-grid {
+    direction: rtl;
+}
+
+/* About text */
+html[dir="rtl"] .about-text {
+    text-align: right;
+}
+
+/* Resume */
+html[dir="rtl"] .resume-preview {
+    text-align: right;
+}
+
+/* Contact */
+html[dir="rtl"] .contact-section {
+    text-align: center;
+}
+
+html[dir="rtl"] .contact-form {
+    direction: rtl;
+}
+
+html[dir="rtl"] .contact-form input,
+html[dir="rtl"] .contact-form textarea {
+    text-align: right;
+}
+
+/* Skills */
+html[dir="rtl"] .skills-category,
+html[dir="rtl"] .skill-item {
+    direction: rtl;
+}
+
+/* Project cards */
+html[dir="rtl"] .project-card {
+    text-align: right;
+}
+
+/* Buttons */
+html[dir="rtl"] .project-links {
+    direction: rtl;
+}
